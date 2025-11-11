@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+h2 {
+  size: 40px;
+  font-family: Arial, sans-serif;
+  color: #1c4f24;
+}
+header {
+  background: #aed7d1;
+  color: #1c4f24;
+  padding: 0.5rem;
+  text-align: center; 
+  margin: 0; 
+  padding: 0; 
+
+
+}
+
+nav ul {
+  list-style: none;
+  padding: 2;
+  display: flex;
+  justify-content: left;
+  background: #1c4f24;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+}
+
+
+nav ul li a:hover {
+  background: #aed7d1;
+}
+
+.seccion {
+  display: none;
+  padding: 1rem;
+  background: white;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+.seccion.activa {
+  display: block;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.producto {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background: #1c4f24;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1c4f24;
+}

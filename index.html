@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Online</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="PROYECTO FINAL/logo sin fondo.png" alt="logo" width="290"/>
+    </header> 
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li><a href="#" onclick="mostrarSeccion('productos')">Productos</a></li>
+        <li><a href="#" onclick="mostrarSeccion('acerca')">Acerca de</a></li>
+        <li><a href="#" onclick="mostrarSeccion('carrito')">Carrito</a></li>
+      </ul>
+    </nav>
+ 
+
+  <main>
+    <section id="inicio" class="seccion activa">
+      <h2>Bienvenido</h2>
+      <p>Bienvenidos a Tienda Naturista Santa Cruz
+En el Santa Marta encontrarás un espacio dedicado al bienestar y la salud natural. 
+En Tienda Naturista Santa Cruz creemos en el poder de la naturaleza para equilibrar cuerpo, mente y espíritu. Aquí podrás descubrir productos naturales, suplementos, aceites esenciales, alimentos saludables y mucho más.
+Ven a visitarnos o haz tu pedido en línea: cuidarte de forma natural nunca fue tan fácil. 🌿</p>
+    </section>
+
+    <section id="productos" class="seccion">
+      <h2>Productos</h2>
+      <div class="grid-productos">
+        <div class="producto">
+          <img src="PROYECTO FINAL/aceite de canabis.png" alt="Aceite de Cannabis" width="210"/>
+          <h3>Aceite de Cannabis</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Camisa', 25)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="PROYECTO FINAL/ALCACHOFA.png" alt="ALCACHOFA" width="100"/>
+          <h3>Alcachofa</h3>
+          <p>$40.00</p>
+          <button onclick="agregarAlCarrito('Pantalón', 40)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="PROYECTO FINAL/antax.png" alt="antax" width="90"/>
+          <h3>Antax</h3>
+          <p>$60.00</p>
+          <button onclick="agregarAlCarrito('Zapatos', 60)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="PROYECTO FINAL/BIOTINA.png" alt="BIOTINA" width="110"/> 
+          <h3>Biotina</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+        </div>
+          <div class="producto">
+          <img src="PROYECTO FINAL/CLORURO DE MAGNESIO.png" alt="Cloruro de magnesio" width="115"/> 
+          <h3>Cloruro de Magnesio</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+        </div>
+          <div class="producto">
+          <img src="PROYECTO FINAL/CLOROFILA.png" alt="CLOROFILA" width="105"/> 
+          <h3>Clorofila</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+        </div>
+         <div class="producto">
+          <img src="PROYECTO FINAL/citrato de magnesio.png" alt="citrato" width="115"/> 
+          <h3>Citrato de Magnesio</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="acerca" class="seccion">
+      <h2>Acerca de</h2>
+      <p>En Tienda Naturista Santa Cruz nos especializamos en ofrecer productos que apoyan tu salud, energía y bienestar diario. Contamos con una amplia variedad de vitaminas, minerales, suplementos alimenticios, productos herbolarios, aceites esenciales y artículos para el cuidado personal.
+
+Nuestro objetivo es ayudarte a mantener un equilibrio saludable y prevenir deficiencias nutricionales con productos de calidad y de marcas reconocidas.
+
+En Tienda Naturista Santa Cruz te ofrecemos atención personalizada y asesoría para elegir los productos que mejor se adapten a tus necesidades.
+Tu bienestar es nuestra prioridad..</p>
+    </section>
+
+    <section id="carrito" class="seccion">
+      <h2>Tu carrito</h2>
+      <div class="carrito">
+        <p> Tu pedido natural te espera
+Revisa los productos que has agregado a tu carrito y confirma tu compra de forma fácil y segura.
+ 
+En Tienda Naturista Santa Cruz te garantizamos calidad, frescura y una entrega rápida en Santa Marta y sus alrededores.
+
+Antes de finalizar, verifica las cantidades y aprovecha nuestras promociones especiales del mes.
+Gracias por confiar en nosotros para cuidar tu bienestar. 🌺</p>
+      <ul id="lista-carrito"></ul>
+      <p>Total: $<span id="total">0</span></p>
+    </div>
+      <form id="form-compra" onsubmit="return validarFormulario()">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+        <button type="submit">Comprar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
