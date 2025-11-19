@@ -42,3 +42,47 @@ function validarFormulario() {
   alert('¡Compra realizada con éxito!');
   return true;
 }
+
+function eliminarProducto(producto) {
+  carrito = carrito.filter(item => item.producto !== producto);
+  recalcularTotal();
+  actualizarCarrito();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector(".footer");
+    footer.style.opacity = 0;
+
+    setTimeout(() => {
+        footer.style.transition = "opacity 0.8s ease-in-out";
+        footer.style.opacity = 1;
+    }, 200);
+});
+
+function vaciarCarrito() {
+    // Si guardas el carrito en localStorage
+    localStorage.removeItem("carrito");
+
+    // Si manejas un arreglo de productos en memoria
+    carrito = [];
+
+    // Si actualizas el HTML
+    document.getElementById("carrito-items").innerHTML = "";
+
+    alert("El carrito ha sido vaciado.");
+}
+
+function cambiarCantidad(idProducto, nuevaCantidad) {
+    // Cargar carrito
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    // Buscar producto
+    const item = carrito.find(p => p.id === idProducto);
+
+    if (item) {
+        item.cantidad = parseInt(nuevaCantidad);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarCarritoUI();
+    }
+}
+
