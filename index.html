@@ -6,229 +6,268 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tienda Online</title>
   <link rel="stylesheet" href="styles.css" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 </head>
 
 <body>
   <header>
-    <img src="logo sin fondo.png" alt="logo" width="390"/> 
+    <img src="logo sin fondo.png" alt="logo" width="390" /> 
   </header>
- <nav class="navbar">
-    <div class="logo">Mi Tienda</div>
 
-    <!-- Botón hamburguesa -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+  <!-- Botón hamburguesa -->
+  <div class="hamburguesa" id="btnMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <!-- Enlaces del menú -->
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#acerca">Acerca de</a></li>
-        <li><a href="#carrito">Carrito</a></li>
-    </ul>
-</nav>
+  <!-- Menú principal -->
+  <nav class="menu" id="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#acerca">Acerca de</a>
+    <a href="#carrito">Carrito</a>
+  </nav>
 
   <main>
+    <!-- ================== INICIO ================== -->
     <section id="inicio" class="seccion activa">
-    <img src="como-abrir-una-tienda-naturista.jpg" class= "imagen" alt="inicio" width="1000" />
+      <img src="como-abrir-una-tienda-naturista.jpg" class="imagen" alt="inicio" width="1000" />
       <h2>Bienvenido</h2>
-      <p>Bienvenidos a Tienda Naturista Santa Cruz
+      <p>
+        Bienvenidos a Tienda Naturista Santa Cruz
         En el Santa Marta encontrarás un espacio dedicado al bienestar y la salud natural.
         En Tienda Naturista Santa Cruz creemos en el poder de la naturaleza para equilibrar cuerpo, mente y espíritu.
-        Aquí podrás descubrir productos naturales, suplementos, aceites esenciales, alimentos saludables y mucho más.
-        Ven a visitarnos o haz tu pedido en línea: cuidarte de forma natural nunca fue tan fácil. 🌿</p>
+      </p>
     </section>
 
+    <!-- ================== PRODUCTOS ================== -->
     <section id="productos" class="seccion">
-      <h2>Productos</h2>
+      <h2>Nuestros productos</h2>
+
       <div class="grid-productos">
-        <div class="producto">
-          <img src="aceite de canabis.png" alt="Aceite de Cannabis" width="220" />
-          <h3>Aceite de Cannabis</h3>
-          <p>$25.00</p>
-          <button onclick="agregarAlCarrito('Camisa', 25)">Agregar</button>
-        </div>
+        <!-- De aquí en adelante van todos tus productos originales -->
         <div class="producto">
           <img src="aceite de coco.png" alt="Aceite de coco" width="209" />
-          <h3>Aceite de Coco</h3>
+          <h3>Aceite de coco</h3>
           <p>$25.00</p>
-          <button onclick="agregarAlCarrito('Camisa', 25)">Agregar</button>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
         </div>
-        <div class="producto">
-          <img src="aceite esencial de oregano.png" alt="Aceite esencial de oregano" width="152" />
-          <h3>Aceite de Oregano</h3>
-          <p>$25.00</p>
-          <button onclick="agregarAlCarrito('Camisa', 25)">Agregar</button>
-        </div>
+
          <div class="producto">
+          <img src="aceite de canabis.png" alt="Aceite de canabis" width="209" />
+          <h3>Aceite de cannabis</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
+        <div class="producto">
+          <img src="aceite esencial de oregano.png" alt="aceite esencial de oregano" width="152" />
+          <h3>Aceite esencial de oregano</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite esencial de oregano', 25)">Agregar</button>
+        </div>
+
+        <div class="producto">
           <img src="tea tree oil.png" alt="tea tree" width="182" />
-          <h3>Tea Tree Oil</h3>
+          <h3>Tea tree oil</h3>
           <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+          <button onclick="agregarAlCarrito('Tea tree oil', 15)">Agregar</button>
         </div>
+
+        <div class="producto">
+          <img src="Jabon de azufre.png" alt="jabon de azufre" width="208" />
+          <h3>Jabón de azufre</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Jabón de azufre', 15)">Agregar</button>
+        </div>
+
          <div class="producto">
-          <img src="Jabon de azufre.png" alt="Jabon" width="208" />
-          <h3>Jabón de Azufre</h3>
+          <img src="jabon de tierra.png" alt="jabon de tierra" width="208" />
+          <h3>Jabón de tierra</h3>
           <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+          <button onclick="agregarAlCarrito('Jabón de azufre', 15)">Agregar</button>
         </div>
+
         <div class="producto">
-          <img src="jabon de tierra.png" alt="Jabon" width="198" />
-          <h3>Jabón de Tierra</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+          <img src="vitamina d.png" alt="vitamina d" width="143" />
+          <h3>Vitamina D</h3>
+          <p>$18.00</p>
+          <button onclick="agregarAlCarrito('Vitamina D', 18)">Agregar</button>
         </div>
+
+        <div class="producto">
+          <img src="clorofila.png" alt="clorofila" width="140" />
+          <h3>Clorofila</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Clorofila', 15)">Agregar</button>
+        </div>
+
+        <div class="producto">
+          <img src="CLORURO DE MAGNESIO.png" alt="Cloruro de magnesio" width="105" />
+          <h3>Cloruro de magnesio</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Cloruro de magnesio', 15)">Agregar</button>
+        </div>
+
+        <div class="producto">
+          <img src="citrato de magnesio.png" alt="citrato de magnesio" width="98" />
+          <h3>Citrato de magnesio</h3>
+          <p>$15.00</p>
+          <button onclick="agregarAlCarrito('Citrato de magnesio', 15)">Agregar</button>
+        </div>
+
+        <div class="producto">
+          <img src="COLAGENO.png" alt="COLAGENO" width="203" />
+          <h3>Colágeno</h3>
+          <p>$30.00</p>
+          <button onclick="agregarAlCarrito('Colágeno', 30)">Agregar</button>
+        </div>
+
+        <div class="producto">
+          <img src="colágeno.png" alt="Colágeno" width="209" />
+          <h3>Colágeno en polvo</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
+         <div class="producto">
+          <img src="jalea real.png" alt="jalea" width="209" />
+          <h3>Jalea real</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
+         <div class="producto">
+          <img src="miel angelita.png" alt="angelita" width="209" />
+          <h3>Miel angelita</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
+           <div class="producto">
+          <img src="mieltertos niños.png" alt="mieltertos" width="209" />
+          <h3>Mieltertos niños</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
+           <div class="producto">
+          <img src="Mieltertos_1080x.png" alt="mieltertos" width="209" />
+          <h3>Mieltertos</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
+         <div class="producto">
+          <img src="propomielito.png" alt="propomielito" width="209" />
+          <h3>Propomielito</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
           <div class="producto">
-          <img src="miel angelita.png" alt="miel" width="182" />
-          <h3>Miel Angelita</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+          <img src="passiflora.png" alt="passiflora" width="209" />
+          <h3>Passiflora</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
         </div>
+
+          <div class="producto">
+          <img src="VALERIANA.png" alt="VALERIANA" width="209" />
+          <h3>Valeriana</h3>
+          <p>$25.00</p>
+          <button onclick="agregarAlCarrito('Aceite de coco', 25)">Agregar</button>
+        </div>
+
         <div class="producto">
-          <img src="ALCACHOFA.png" alt="ALCACHOFA" width="116" />
+          <img src="OMEGA 3.png" alt="OMEGA 3" width="196" />
+          <h3>Omega 3</h3>
+          <p>$28.00</p>
+          <button onclick="agregarAlCarrito('Omega 3', 28)">Agregar</button>
+        </div>
+       
+        <div class="producto">
+          <img src="alcachofa.png" alt="alcachofa" width="181" />
           <h3>Alcachofa</h3>
           <p>$40.00</p>
-          <button onclick="agregarAlCarrito('Pantalón', 40)">Agregar</button>
+          <button onclick="agregarAlCarrito('Alcachofa', 40)">Agregar</button>
         </div>
+
         <div class="producto">
           <img src="antax.png" alt="antax" width="99" />
           <h3>Antax</h3>
           <p>$60.00</p>
-          <button onclick="agregarAlCarrito('Zapatos', 60)">Agregar</button>
+          <button onclick="agregarAlCarrito('Antax', 60)">Agregar</button>
         </div>
+
         <div class="producto">
           <img src="apetifort.png" alt="apetifort" width="148" />
           <h3>Apetifort</h3>
           <p>$60.00</p>
-          <button onclick="agregarAlCarrito('Zapatos', 60)">Agregar</button>
+          <button onclick="agregarAlCarrito('Apetifort', 60)">Agregar</button>
         </div>
+
         <div class="producto">
           <img src="BIOTINA.png" alt="BIOTINA" width="115" />
           <h3>Biotina</h3>
           <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+          <button onclick="agregarAlCarrito('Biotina', 15)">Agregar</button>
         </div>
+
         <div class="producto">
           <img src="CLOROFILA.png" alt="CLOROFILA" width="109" />
           <h3>Clorofila</h3>
           <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-        <div class="producto">
-          <img src="CLORURO DE MAGNESIO.png" alt="Cloruro de magnesio" width="105" />
-          <h3>Cloruro de Magnesio</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-        <div class="producto">
-          <img src="citrato de magnesio.png" alt="citrato" width="98" />
-          <h3>Citrato de Magnesio</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-        <div class="producto">
-          <img src="colageno.png" alt="colageno" width="105" />
-          <h3>Colageno</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-        <div class="producto">
-          <img src="colágeno.png" alt="colageno" width="142" />
-          <h3>Colageno en polvo</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-       
-         <div class="producto">
-          <img src="jalea real.png" alt="Jalea" width="152" />
-          <h3>Jalea Real</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-      
-        <div class="producto">
-          <img src="mieltertos niños.png" alt="mieltertos" width="192" />
-          <h3>Mieltertos niños</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-        <div class="producto">
-          <img src="propomielito.png" alt="propomielito" width="108" />
-          <h3>Propomielito</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-         <div class="producto">
-          <img src="OMEGA 3.png" alt="OMEGA" width="110" />
-          <h3>Omega 3</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-          <div class="producto">
-          <img src="VITAMINA D.png" alt="vitamina d" width="118" />
-          <h3>Vitamina D</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-        <div class="producto">
-          <img src="passiflora.png" alt="passiflora" width="142" />
-          <h3>Passiflora</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
-        </div>
-         <div class="producto">
-          <img src="VALERIANA.png" alt="VALERIANA" width="97" />
-          <h3>Valeriana</h3>
-          <p>$15.00</p>
-          <button onclick="agregarAlCarrito('Gorra', 15)">Agregar</button>
+          <button onclick="agregarAlCarrito('Clorofila', 15)">Agregar</button>
         </div>
       </div>
     </section>
 
+    <!-- ================== ACERCA ================== -->
     <section id="acerca" class="seccion">
       <h2>Acerca de</h2>
-      <p>En Tienda Naturista Santa Cruz nos especializamos en ofrecer productos que apoyan tu salud, energía y bienestar
+      <p>
+        En Tienda Naturista Santa Cruz nos especializamos en ofrecer productos que apoyan tu salud, energía y bienestar
         diario. Contamos con una amplia variedad de vitaminas, minerales, suplementos alimenticios, productos
         herbolarios, aceites esenciales y artículos para el cuidado personal.
-
         Nuestro objetivo es ayudarte a mantener un equilibrio saludable y prevenir deficiencias nutricionales con
         productos de calidad y de marcas reconocidas.
-
         En Tienda Naturista Santa Cruz te ofrecemos atención personalizada y asesoría para elegir los productos que
         mejor se adapten a tus necesidades.
-        Tu bienestar es nuestra prioridad..</p>
+        
+        Tu bienestar es nuestra prioridad.
+      </p>
     </section>
 
+    <!-- ================== CARRITO ================== -->
     <section id="carrito" class="seccion">
       <h2>Tu carrito</h2>
       <div class="carrito">
-        <p> Tu pedido natural te espera
+        <p>
+          Tu pedido natural te espera.
           Revisa los productos que has agregado a tu carrito y confirma tu compra de forma fácil y segura.
+        </p>
 
-          En Tienda Naturista Santa Cruz te garantizamos calidad, frescura y una entrega rápida en Santa Marta y sus
-          alrededores.
-
-          Antes de finalizar, verifica las cantidades y aprovecha nuestras promociones especiales del mes.
-          Gracias por confiar en nosotros para cuidar tu bienestar. 🌺</p>
         <ul id="lista-carrito"></ul>
         <p>Total: $<span id="total">0</span></p>
       </div>
+
       <!-- Botón para vaciar -->
-<button onclick="vaciarCarrito()">Vaciar carrito</button>
+      <button onclick="vaciarCarrito()">Vaciar carrito</button>
 
-<!-- Selector de cantidad -->
-<select onchange="cambiarCantidad(1, this.value)">
-    <option value="1">1 unidad</option>
-    <option value="2">2 unidades</option>
-    <option value="3">3 unidades</option>
-</select>
+      <!-- Selector de cantidad (ejemplo genérico) -->
+      <select onchange="cambiarCantidad(0, this.value)">
+        <option value="1">1 unidad</option>
+        <option value="2">2 unidades</option>
+        <option value="3">3 unidades</option>
+      </select>
 
-<!-- Contenedor del carrito -->
-<div id="carrito-items"></div>
+      <!-- Contenedor del carrito (extra) -->
+      <div id="carrito-items"></div>
 
       <form id="form-compra" onsubmit="return validarFormulario()">
         <input type="text" id="nombre" placeholder="Nombre completo" required />
@@ -238,55 +277,36 @@
     </section>
   </main>
 
+  <!-- JS PRINCIPAL -->
   <script src="script.js"></script>
- <script>
-// Cambiar secciones al hacer clic en el menú
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        // Quitar 'activa' de todas
-        document.querySelectorAll('.seccion').forEach(sec => {
-            sec.classList.remove('activa');
-        });
-
-        // Activar la sección seleccionada
-        const id = this.getAttribute('href').substring(1);
-        document.getElementById(id).classList.add('activa');
-
-        // Cerrar menú hamburguesa
-        document.getElementById("navLinks").classList.remove("active");
-    });
-});
-</script>
-
-</body>
- 
-<footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="footer-contenedor">
 
-        <div class="footer-col">
-            <h3>Contacto</h3>
-            <p><strong>Dirección:</strong> Cra 29 #42-37, Santa Marta, Magdalena</p>
-            <p><strong>Teléfono:</strong> <a href="tel:+573000000000">+57 316 309 2910</a></p>
-        </div>
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <p><strong>Dirección:</strong> Cra 29 #42-37, Santa Marta, Magdalena</p>
+        <p><strong>Teléfono:</strong> <a href="tel:+573000000000">+57 316 309 2910</a></p>
+      </div>
 
-        <div class="footer-col">
-            <h3>Síguenos</h3>
-            <a href="https://www.instagram.com/naturistasantacruz/" target="_blank" class="footer-red">
-                Instagram
-            </a>
-        </div>
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <a href="https://www.instagram.com/naturistasantacruz/" target="_blank" class="footer-red">
+          Instagram
+        </a>
+      </div>
 
-        <div class="footer-col">
-            <h3>Santa Cruz</h3>
-            <p>Tienda Naturista </p>
-        </div>
+      <div class="footer-col">
+        <h3>Santa Cruz</h3>
+        <p>Tienda Naturista</p>
+      </div>
 
     </div>
 
     <div class="footer-copy">
-        © 2025 Tienda Naturista Santa Cruz - Todos los derechos reservados
+      © 2025 Tienda Naturista Santa Cruz - Todos los derechos reservados
     </div>
-</footer>
+  </footer>
+</body>
 </html>
