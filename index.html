@@ -13,14 +13,25 @@
   <header>
     <img src="logo sin fondo.png" alt="logo" width="390"/> 
   </header>
-  <nav>
-    <ul>
-      <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
-      <li><a href="#" onclick="mostrarSeccion('productos')">Productos</a></li>
-      <li><a href="#" onclick="mostrarSeccion('acerca')">Acerca de</a></li>
-      <li><a href="#" onclick="mostrarSeccion('carrito')">Carrito</a></li>
+ <nav class="navbar">
+    <div class="logo">Mi Tienda</div>
+
+    <!-- Botón hamburguesa -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Enlaces del menú -->
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+        <li><a href="#carrito">Carrito</a></li>
     </ul>
-  </nav>
+</nav>
+
   <main>
     <section id="inicio" class="seccion activa">
     <img src="como-abrir-una-tienda-naturista.jpg" class= "imagen" alt="inicio" width="1000" />
@@ -228,6 +239,27 @@
   </main>
 
   <script src="script.js"></script>
+ <script>
+// Cambiar secciones al hacer clic en el menú
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Quitar 'activa' de todas
+        document.querySelectorAll('.seccion').forEach(sec => {
+            sec.classList.remove('activa');
+        });
+
+        // Activar la sección seleccionada
+        const id = this.getAttribute('href').substring(1);
+        document.getElementById(id).classList.add('activa');
+
+        // Cerrar menú hamburguesa
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+</script>
+
 </body>
  
 <footer class="footer">
