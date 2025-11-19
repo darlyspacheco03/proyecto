@@ -252,3 +252,32 @@ button:hover {
     margin-top: 2.5rem;
     opacity: 0.8;
 }
+
+/* Evitar desbordes en móvil */
+body, html {
+    overflow-x: hidden;
+}
+
+/* Todas las imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Secciones con márgenes correctos */
+.seccion {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Botones del carrito alineados */
+.carrito button {
+    margin-top: 10px;
+}
+
+/* Select de cantidad responsivo */
+select {
+    font-size: 16px;
+    padding: 5px;
+}
