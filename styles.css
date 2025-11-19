@@ -169,7 +169,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 8rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -240,7 +240,7 @@ img {
 .hamburguesa span {
     width: 30px;
     height: 3px;
-    background: #ffffff;
+    background: #1c4f24;
     display: block;
     border-radius: 3px;
 }
@@ -280,8 +280,8 @@ img {
         padding: 20px;
         position: absolute;
         right: 0;
-        top: 70px;
-        width: 200px;
+        top: 80px;
+        width: 100px;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
